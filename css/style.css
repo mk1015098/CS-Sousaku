@@ -154,31 +154,186 @@ Products
 /*-------------------------------------------
 Products1
 -------------------------------------------*/
-
+#products1 {
+  flex-direction: row-reverse;
+}
+#products1 .section-title {
+  margin-left: 20px;
+  writing-mode: vertical-lr;
+  -webkit-writing-mode: vertical-lr;
+  -moz-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+}
+#products1 .text {
+  background: rgba(249, 233, 6, 0.6);
+  left: -20px;
+}
 
 /*-------------------------------------------
-Image
+Products2
 -------------------------------------------*/
-
-
-
+#products2 .section-title {
+  margin-right: 20px;
+  writing-mode: vertical-lr;
+  -webkit-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+}
+#products2 .text {
+  background: rgba(149, 42, 38, 0.6);
+  right: -20px;
+}
 
 /*-------------------------------------------
-Detail
+Shop
 -------------------------------------------*/
-
-
-
+#shop iframe {
+  width: 100%;
+  vertical-align: bottom;
+}
 
 /*-------------------------------------------
 Footer
 -------------------------------------------*/
-
+#footer {
+  background-color: #000;
+  color: #fff;
+  padding: 80px 80px 30px 30px;
+}
+#footer .inner {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  margin-bottom: 10px;
+}
+#footer .inner .left,
+#footer .inner .right {
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+}
+#footer .inner .logo {
+  width: 40px;
+  margin-left: 60px;
+}
+#footer .inner .info {
+  line-height: 2;
+}
+#footer .menu {
+  font-size: 1rem;
+  margin-right: 60px;
+}
+#footer .menu li {
+  margin-left: 25px;
+}
+#footer .copyright {
+  font-size: 0.625px;
+  text-align: center;
+}
 
 /*-------------------------------------------
 SP
 -------------------------------------------*/
-@media screen and (max-width: px) {
+@media screen and (max-width: 768px) {
+  .wrapper {
+    max-width: 100%;
+  }
+  
+  /*-------------------------------------------
+  Header
+  -------------------------------------------*/
+  #header {
+    background-image: url(../img/mainvisual-sp.jpg);
+    padding: 20px;
+    margin-bottom: 80px;
+  }
+  #header .onlinestore {
+    left: 20px;
+    bottom: 20px;
+  }
+  
+  /*-------------------------------------------
+  News
+  -------------------------------------------*/
+  #news {
+    margin-bottom: 80px;
+  }
+  #news .section-title .ja {
+    font-size: 1.75rem;
+  }
+  #news .list {
+    padding: 20px 30px 0 0;
+  }
+  #news .list dt {
+    padding: 15px 12px 15px 5px;
+  }
+  #news .list dt:nth-of-type(n + 4) {
+    display: none;
+  }
+  #news .list dd {
+    padding: 15px 0 15px 12px;
+  }
+  #news .list dd:nth-of-type(3) {
+    border-left: solid 1px #000;
+  }
+  #news .list dd:nth-of-type(n + 4) {
+    display: none;
+  }
+  
+  /*-------------------------------------------
+  Products
+  -------------------------------------------*/
+  .products {
+    margin-bottom: 100px;
+  }
+  .products .section-title .ja {
+    font-size: 1.5rem;
+  }
+  .products .section-title .en {
+    display: none;
+  }
+  .products .img {
+    width: 90%;
+    margin-top: 70px;
+  }
+  .products .text {
+    width: 64%;
+    font-size: 0.875rem;
+    padding: 30px 0;
+  }
+  
+  /*-------------------------------------------
+  Products1
+  -------------------------------------------*/
+  #products1 .section-title {
+    margin-left: 10px;
+  }
 
+  /*-------------------------------------------
+  Products2
+  -------------------------------------------*/
+  #products2 .section-title {
+    margin-right: 10px;
+  }
+
+  /*-------------------------------------------
+  Footer
+  -------------------------------------------*/
+  #footer {
+    padding: 40px 20px 30px 20px;
+  }
+  #footer .inner .logo {
+    margin-left: 25px;
+  }
+  #footer .menu li {
+    margin-left: 10px;
+  }
+  #footer .menu {
+    font-size: 0.875rem;
+    margin-right: 25px;
+  }
 }
 
